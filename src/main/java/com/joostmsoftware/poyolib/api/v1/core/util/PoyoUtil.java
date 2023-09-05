@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1;
+package com.joostmsoftware.poyolib.api.v1.core.util;
 
 import org.jetbrains.annotations.NotNull;
 
