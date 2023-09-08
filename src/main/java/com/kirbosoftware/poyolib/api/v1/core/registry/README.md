@@ -1,5 +1,4 @@
 ## How to use the Registar module from Poyolib
-
 First you would want to setup a `Registar<T>` object like this
 ```java
 import com.kirbosoftware.poyolib.api.v1.core.registry.Registar;
@@ -8,7 +7,9 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 
 public class ExampleMod implements ModInitializer {
-    public Registar<Item> ITEMS = new Registar<>(Registries.ITEM, "modId");
+    public Registar<Item> ITEMS = new Registar<>(Registries.ITEM, "modId"); 
+    // or
+    public Registar<Item> ITEMS = Registar.set(Registries.ITEM, "modId");
     
     @Override
     public void onInitialize() {
@@ -22,7 +23,10 @@ import net.minecraft.item.Item;
 
 public class ExampleItems {
     public static final Item TEST_ITEM = ExampleMod.ITEMS.register("test_item", new Item(new Item.Settings()));
-    
+    // or
+    public static final Item TEST_ITEM = ExampleMod.ITEMS.register("test_item", () -> new Item(new Item.Settings()));
+
+
     public static void init() {
         
     }
