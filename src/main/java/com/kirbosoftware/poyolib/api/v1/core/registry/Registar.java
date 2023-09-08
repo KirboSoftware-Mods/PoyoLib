@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1.core.registry;
+package com.kirbosoftware.poyolib.api.v1.core.registry;
 
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;

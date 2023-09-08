@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1.item;
+package com.kirbosoftware.poyolib.api.v1.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

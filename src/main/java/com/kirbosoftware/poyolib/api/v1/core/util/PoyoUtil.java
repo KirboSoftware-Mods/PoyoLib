@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1.core.util;
+package com.kirbosoftware.poyolib.api.v1.core.util;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +10,7 @@ public class PoyoUtil {
      * @param string the string you want to capitalize.
      * @return a capitalised string.
      */
-    private static @NotNull String capitalizeString(String string) {
+    public static @NotNull String capitalizeString(@NotNull String string) {
         char[] chars = string.toLowerCase().toCharArray();
         boolean found = false;
         for (int i = 0; i < chars.length; i++) {

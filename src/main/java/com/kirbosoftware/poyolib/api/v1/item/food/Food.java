@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1.item.food;
+package com.kirbosoftware.poyolib.api.v1.item.food;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;

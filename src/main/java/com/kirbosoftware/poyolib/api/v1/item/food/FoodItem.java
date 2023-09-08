@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.api.v1.item.food;
+package com.kirbosoftware.poyolib.api.v1.item.food;
 
 import net.minecraft.item.Item;
 import org.jetbrains.annotations.NotNull;

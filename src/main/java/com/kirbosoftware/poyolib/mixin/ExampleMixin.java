@@ -1,4 +1,4 @@
-package com.joostmsoftware.poyolib.mixin;
+package com.kirbosoftware.poyolib.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
