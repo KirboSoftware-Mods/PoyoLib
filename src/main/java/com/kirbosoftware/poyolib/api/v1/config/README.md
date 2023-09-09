@@ -25,7 +25,7 @@ import com.kirbosoftware.poyolib.api.v1.config.ConfigHelper;
 import com.kirbosoftware.poyolib.api.v1.config.ConfigValue;
 
 public class ExampleConfig {
-    private static final ConfigHelper helper = new ConfigHelper(PoyoLib.holder);
+    private static final ConfigHelper helper = new ConfigHelper(ExampleMod.HOLDER);
     public static ConfigValue<Integer> TEST_INT = helper.getOrCreate("test_int", 11);
     public static ConfigValue<Boolean> TEST_BOOL = helper.getOrCreate("test_bool", false);
 }

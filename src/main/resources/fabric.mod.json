@@ -15,9 +15,6 @@
 	"icon": "assets/poyolib/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"com.kirbosoftware.poyolib.PoyoLib"
-		]
 	},
 	"mixins": [
 		"poyolib.mixins.json"
