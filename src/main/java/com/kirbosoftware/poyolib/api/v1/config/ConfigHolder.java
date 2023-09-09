@@ -49,11 +49,7 @@ public class ConfigHolder {
         }
     }
 
-    private Object getObject() {
-        return object;
-    }
-
-    public Field[] getDeclaredFields() {
-        return getObject().getClass().getDeclaredFields();
+    public boolean hasValue(String key) {
+        return configValues.containsKey(key);
     }
 }

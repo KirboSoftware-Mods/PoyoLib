@@ -21,11 +21,13 @@ it automatically sets the filename and will create a file in the `config` folder
 Then create a class where you will store your values. As example:
 
 ```java
+import com.kirbosoftware.poyolib.api.v1.config.ConfigHelper;
 import com.kirbosoftware.poyolib.api.v1.config.ConfigValue;
 
-public class ExampleConfigClass {
-    public static ConfigValue<Integer> TEST_INT = ConfigValue.create("test_int", 11);
-    public static ConfigValue<Boolean> TEST_BOOL = ConfigValue.create("test_bool", true);
+public class ExampleConfig {
+    private static final ConfigHelper helper = new ConfigHelper(PoyoLib.holder);
+    public static ConfigValue<Integer> TEST_INT = helper.getOrCreate("test_int", 11);
+    public static ConfigValue<Boolean> TEST_BOOL = helper.getOrCreate("test_bool", false);
 }
 ```
 here we set 2 values, a int and a boolean. 
@@ -41,7 +43,7 @@ public class ExampleMod implements ModInitializer {
     @Override
 
     public void onInitialize() {
-        HOLDER.add(new ExampleConfigClass());
+        HOLDER.add(new ExampleConfig());
         ConfigManager.load(HOLDER);
         ConfigManager.store(HOLDER);
     }

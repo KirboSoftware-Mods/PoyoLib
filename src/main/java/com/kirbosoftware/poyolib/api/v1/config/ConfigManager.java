@@ -4,12 +4,12 @@ import com.kirbosoftware.poyolib.util.Util;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.Properties;
 
+@SuppressWarnings("unused")
 public class ConfigManager {
     public static void load(ConfigHolder holder) {
         Properties properties = new Properties();
@@ -29,9 +29,6 @@ public class ConfigManager {
                     configValue.setValue(value);
                 }
             }
-
-//            // Sync ExampleConfig fields with values from the ConfigHolder
-//            syncConfig(holder);
 
             // Util.LOGGER.info("Loaded properties: " + properties);
         } catch (FileNotFoundException e) {
@@ -76,23 +73,6 @@ public class ConfigManager {
         } else {
             // Handle other types as needed
             throw new IllegalArgumentException("Unsupported type: " + targetType);
-        }
-    }
-
-    // TODO: fix this mess
-    private static void syncConfig(ConfigHolder holder) {
-        Field[] fields = holder.getDeclaredFields();
-        for (Field field : fields) {
-            if (ConfigValue.class.isAssignableFrom(field.getType())) {
-                try {
-                    field.setAccessible(true);
-                    String fieldName = field.getName();
-                    ConfigValue<?> configValue = holder.getValue(fieldName);
-                    field.set(null, configValue.get());
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }
