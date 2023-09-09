@@ -4,7 +4,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 
 @SuppressWarnings("unused")
-public class ArmorConstructor {
+public class ArmorBuilder {
     public static class Helmet extends ArmorItem {
         /**
          * Creates a helmet with the chosen materials.

@@ -9,8 +9,8 @@ import java.util.function.Supplier;
 
 @SuppressWarnings("unused")
 public class Registar<T> {
-    private String MOD_ID;
-    private Registry<T> registry;
+    private final String MOD_ID;
+    private final Registry<T> registry;
     private final Map<String, T> entries = new HashMap<>();
 
     /**
