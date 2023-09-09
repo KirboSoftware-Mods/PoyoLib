@@ -8,11 +8,12 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class TagRegistar<T> {
     private final RegistryKey<? extends Registry<T>> key;
     private final String modId;
-
     private final List<String> entries = new ArrayList<>();
+
     public TagRegistar(RegistryKey<? extends Registry<T>> key, String modId) {
         this.key = key;
         this.modId = modId;
