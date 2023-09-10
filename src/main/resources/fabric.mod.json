@@ -8,8 +8,8 @@
 		"KirboSoftware"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/KirboSoftware-Mods/PoyoLib",
+		"issues": "https://github.com/KirboSoftware-Mods/PoyoLib/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/poyolib/icon.png",
@@ -21,7 +21,13 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
+		"minecraft": ">=1.20",
 		"java": ">=17"
+	},
+	"custom": {
+		"modmenu": {
+			"badges": ["library"],
+			"update_checker": false
+		}
 	}
 }

@@ -1,9 +1,28 @@
-# Fabric Example Mod
+# Poyo Lib
 
-## Setup
+A utility library for all KirboSoftware mods
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+## Using it in your project
+add the repository
+```groovy
+repositories {
+    //...
+    maven {
+        url = "https://maven.kirbosoftware.com"
+    }
+    //...
+}
+```
+then add the project like so
+```groovy
+dependencies {
+    //...
+    modImplementation "com.kirbosoftware:poyolib:$version"
+    //...
+}
+```
+replace `$version` with the version of poyo lib you want to use.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Poyo Lib is under the MIT, please check out the license!
