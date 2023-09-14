@@ -4,7 +4,7 @@ plugins {
 	id 'io.github.juuxel.loom-vineflower' version '1.+'
 }
 
-version = project.version
+version = project.mod_version
 group = project.maven_group
 
 base {
