@@ -54,10 +54,6 @@ public class Registar<T> {
         return Registry.register(getRegistry(), new Identifier(getModId(), path), entry);
     }
 
-    public Registar<T> set(Registry<T> registry, String modId) {
-        return new Registar<>(registry, modId);
-    }
-
     private String getModId() {
         return MOD_ID;
     }

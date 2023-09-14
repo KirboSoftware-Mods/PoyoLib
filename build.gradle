@@ -63,8 +63,10 @@ jar {
 // configure the maven publication
 publishing {
 	publications {
-		mavenJava(MavenPublication) {
-			artifactId = project.archives_base_name
+		maven (MavenPublication) {
+			groupId = group
+			artifactId = 'poyolib'
+			version = mod_version
 			from components.java
 		}
 	}
@@ -75,16 +77,10 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
-		repositories {
-			maven {
-				name = "kirbosoftware"
-				url = "http://95.111.234.133:8080/releases"
-				credentials(PasswordCredentials)
-				authentication {
-					basic(BasicAuthentication)
-				}
-				allowInsecureProtocol = true
-			}
+		maven {
+			name 'Repsy'
+			credentials(PasswordCredentials)
+			url 'https://repsy.io/mvn/kirbosoftware/releases'
 		}
 	}
 }

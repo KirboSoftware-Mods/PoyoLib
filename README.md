@@ -8,7 +8,8 @@ add the repository
 repositories {
     //...
     maven {
-        url = "https://maven.kirbosoftware.com"
+        name 'KirboSoftware'
+        url 'https://repsy.io/mvn/kirbosoftware/releases'
     }
     //...
 }

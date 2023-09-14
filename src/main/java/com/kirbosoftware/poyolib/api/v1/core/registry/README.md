@@ -9,9 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 
 public class ExampleMod implements ModInitializer {
-    public Registar<Item> ITEMS = new Registar<>(Registries.ITEM, "modId"); 
-    // or
-    public Registar<Item> ITEMS = Registar.set(Registries.ITEM, "modId");
+    public Registar<Item> ITEMS = new Registar<>(Registries.ITEM, "modId");
     
     @Override
     public void onInitialize() {
