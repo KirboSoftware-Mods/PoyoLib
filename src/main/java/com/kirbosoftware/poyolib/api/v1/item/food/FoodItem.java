@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
 public class FoodItem extends Item {
-    public FoodItem(@NotNull Settings settings, @NotNull Food food) {
+    public FoodItem(@NotNull Settings settings, @NotNull FoodType food) {
         super(settings.food(food.createComponent()));
     }
 }
