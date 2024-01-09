@@ -1,12 +1,11 @@
-package com.kirbosoftware.poyolib.api.v1.item;
+package com.kirbosoftware.poyolib.api.item.craft;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.random.Random;
 
-@SuppressWarnings("unused")
-public class DamageableCraftingItem extends Item {
-    public DamageableCraftingItem(int maxDamage, Settings settings) {
+public class CraftedItemDamage extends Item {
+    public CraftedItemDamage(int maxDamage, Settings settings) {
         super(settings.maxDamage(maxDamage));
     }
 

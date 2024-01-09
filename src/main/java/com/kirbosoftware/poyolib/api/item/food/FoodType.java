@@ -1,6 +1,6 @@
-package com.kirbosoftware.poyolib.api.v1.item.food;
+package com.kirbosoftware.poyolib.api.item.food;
 
-import com.kirbosoftware.poyolib.api.v1.item.food.impl.FoodEssentials;
+import com.kirbosoftware.poyolib.api.item.food.impl.FoodEssentials;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.FoodComponent;
 

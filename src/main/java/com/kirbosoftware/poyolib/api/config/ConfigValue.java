@@ -1,6 +1,5 @@
-package com.kirbosoftware.poyolib.api.v1.config;
+package com.kirbosoftware.poyolib.api.config;
 
-@SuppressWarnings("unused")
 public class ConfigValue<T> {
     private final String key;
     private T value;
@@ -8,6 +7,10 @@ public class ConfigValue<T> {
     public ConfigValue(String key, T value) {
         this.key = key;
         this.value = value;
+    }
+
+    public static <T> ConfigValue<T> create(String key, T value) {
+        return new ConfigValue<>(key, value);
     }
 
     /**

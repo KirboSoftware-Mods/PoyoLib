@@ -1,9 +1,9 @@
-package com.kirbosoftware.poyolib.api.v1.core.util;
+package com.kirbosoftware.poyolib.api.util;
 
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
-public class PoyoUtil {
+public class LangUtil {
     /**
      * A method to capitalize a string and remove anything what's between it.
      * <a href="https://stackoverflow.com/questions/1892765/how-to-capitalize-the-first-character-of-each-word-in-a-string">Source</a>

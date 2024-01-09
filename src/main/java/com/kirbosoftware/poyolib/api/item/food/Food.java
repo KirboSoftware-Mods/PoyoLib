@@ -1,4 +1,4 @@
-package com.kirbosoftware.poyolib.api.v1.item.food;
+package com.kirbosoftware.poyolib.api.item.food;
 
 public class Food extends FoodType{
     private int hunger = 0;

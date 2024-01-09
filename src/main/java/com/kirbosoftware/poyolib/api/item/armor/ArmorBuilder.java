@@ -1,4 +1,4 @@
-package com.kirbosoftware.poyolib.api.v1.item.armor;
+package com.kirbosoftware.poyolib.api.item.armor;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
