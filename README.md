@@ -8,8 +8,8 @@ add the repository
 repositories {
     //...
     maven {
-        name 'KirboSoftware'
-        url 'https://repsy.io/mvn/kirbosoftware/releases'
+        name "KirboSoftware"
+        url "https://maven.kirbosoftware.com/releases"
     }
     //...
 }
@@ -23,7 +23,7 @@ dependencies {
 }
 ```
 replace `$version` with the version of poyo lib you want to use.
-
+latest is `0.3.0`
 ## License
 
 Poyo Lib is under the MIT, please check out the license!
