@@ -1,5 +1,10 @@
 # Changelog 
 
+## v0.3
+- rewritten `Registar` module. See the module's `README.md`
+- rewritten `Config` module. See the module's `README.md`
+- moved classes away from `v1` to just `api/{module}` instead of `api/v1/{module}`.
+
 ## v0.2.1.2
 - renamed `Food` to `FoodType`
 - created a `Food` class for people to extend to instead of FoodType
