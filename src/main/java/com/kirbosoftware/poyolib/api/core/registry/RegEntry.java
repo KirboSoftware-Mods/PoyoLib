@@ -10,16 +10,16 @@ import net.minecraft.resources.ResourceLocation;
 @SuppressWarnings("unused")
 public class RegEntry<T> {
     private final T entry;
-    private final ResourceLocation identifier;
+    private final ResourceLocation resourceLocation;
 
     /**
      * Private constructor to create a {@code RegEntry} with the specified identifier and object.
      *
-     * @param identifier The identifier associated with the registered object.
+     * @param resourceLocation The identifier associated with the registered object.
      * @param entry      The registered object.
      */
-    private RegEntry(ResourceLocation identifier, T entry) {
-        this.identifier = identifier;
+    private RegEntry(ResourceLocation resourceLocation, T entry) {
+        this.resourceLocation = resourceLocation;
         this.entry = entry;
     }
 
@@ -27,12 +27,12 @@ public class RegEntry<T> {
      * Creates a new instance of {@code RegEntry} with the specified identifier and object.
      *
      * @param <T>        The type of the registered object.
-     * @param identifier The identifier associated with the registered object.
+     * @param resourceLocation The identifier associated with the registered object.
      * @param entry      The registered object.
      * @return A new instance of {@code RegEntry} containing the specified identifier and object.
      */
-    public static <T> RegEntry<T> create(ResourceLocation identifier, T entry) {
-        return new RegEntry<>(identifier, entry);
+    public static <T> RegEntry<T> create(ResourceLocation resourceLocation, T entry) {
+        return new RegEntry<>(resourceLocation, entry);
     }
 
     /**
@@ -50,7 +50,7 @@ public class RegEntry<T> {
      * @return The identifier associated with the registered object.
      */
     public ResourceLocation getId() {
-        return identifier;
+        return resourceLocation;
     }
 
     /**
@@ -59,6 +59,6 @@ public class RegEntry<T> {
      * @return The translationKey associated with the registered object.
      */
     public String getTranslationKey() {
-        return identifier.toLanguageKey();
+        return resourceLocation.toLanguageKey();
     }
 }
