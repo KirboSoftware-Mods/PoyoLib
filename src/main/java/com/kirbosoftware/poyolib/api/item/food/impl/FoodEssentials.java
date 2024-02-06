@@ -1,7 +1,6 @@
 package com.kirbosoftware.poyolib.api.item.food.impl;
 
-import net.minecraft.entity.effect.StatusEffectInstance;
-
+import net.minecraft.world.effect.MobEffectInstance;
 import java.util.List;
 
 public interface FoodEssentials {
@@ -10,6 +9,6 @@ public interface FoodEssentials {
     boolean isSnack();
     boolean isMeat();
     boolean isEdible();
-    List<StatusEffectInstance> statusEffectInstanceList();
+    List<MobEffectInstance> statusEffectInstanceList();
     float setStatusEffectInTicks();
 }

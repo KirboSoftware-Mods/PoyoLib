@@ -1,6 +1,6 @@
 package com.kirbosoftware.poyolib.api.core.registry;
 
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 
 /**
  * A simple container class representing an entry registered in a {@code Registar}.
@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 @SuppressWarnings("unused")
 public class RegEntry<T> {
     private final T entry;
-    private final Identifier identifier;
+    private final ResourceLocation identifier;
 
     /**
      * Private constructor to create a {@code RegEntry} with the specified identifier and object.
@@ -18,7 +18,7 @@ public class RegEntry<T> {
      * @param identifier The identifier associated with the registered object.
      * @param entry      The registered object.
      */
-    private RegEntry(Identifier identifier, T entry) {
+    private RegEntry(ResourceLocation identifier, T entry) {
         this.identifier = identifier;
         this.entry = entry;
     }
@@ -31,7 +31,7 @@ public class RegEntry<T> {
      * @param entry      The registered object.
      * @return A new instance of {@code RegEntry} containing the specified identifier and object.
      */
-    public static <T> RegEntry<T> create(Identifier identifier, T entry) {
+    public static <T> RegEntry<T> create(ResourceLocation identifier, T entry) {
         return new RegEntry<>(identifier, entry);
     }
 
@@ -49,7 +49,7 @@ public class RegEntry<T> {
      *
      * @return The identifier associated with the registered object.
      */
-    public Identifier getId() {
+    public ResourceLocation getId() {
         return identifier;
     }
 
@@ -59,6 +59,6 @@ public class RegEntry<T> {
      * @return The translationKey associated with the registered object.
      */
     public String getTranslationKey() {
-        return identifier.toTranslationKey();
+        return identifier.toLanguageKey();
     }
 }

@@ -1,8 +1,8 @@
 package com.kirbosoftware.poyolib.api.item.food;
 
 import com.kirbosoftware.poyolib.api.item.food.impl.FoodEssentials;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.food.FoodProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public abstract class FoodType implements FoodEssentials {
     public abstract float setFullness();
 
     @Override
-    public List<StatusEffectInstance> statusEffectInstanceList() {
+    public List<MobEffectInstance> statusEffectInstanceList() {
         return new ArrayList<>();
     }
 
@@ -39,14 +39,14 @@ public abstract class FoodType implements FoodEssentials {
         return false;
     }
 
-    public FoodComponent createComponent() {
-        FoodComponent.Builder builder = new FoodComponent.Builder()
-                .hunger(setHunger())
-                .saturationModifier(setFullness());
-        for (StatusEffectInstance se : statusEffectInstanceList()) builder.statusEffect(se, setStatusEffectInTicks());
+    public FoodProperties createComponent() {
+        FoodProperties.Builder builder = new FoodProperties.Builder()
+                .nutrition(setHunger())
+                .saturationMod(setFullness());
+        for (MobEffectInstance se : statusEffectInstanceList()) builder.effect(se, setStatusEffectInTicks());
         if (isMeat()) builder.meat();
-        if (isSnack()) builder.snack();
-        if (isEdible()) builder.alwaysEdible();
+        if (isSnack()) builder.fast();
+        if (isEdible()) builder.alwaysEat();
         return builder.build();
     }
 }
