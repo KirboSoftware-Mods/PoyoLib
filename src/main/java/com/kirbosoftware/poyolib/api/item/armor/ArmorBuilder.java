@@ -1,7 +1,7 @@
 package com.kirbosoftware.poyolib.api.item.armor;
 
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
 
 @SuppressWarnings("unused")
 public class ArmorBuilder {
@@ -9,10 +9,10 @@ public class ArmorBuilder {
         /**
          * Creates a helmet with the chosen materials.
          * @param material The armor material.
-         * @param settings Item settings.
+         * @param properties Item properties.
          */
-        public Helmet(ArmorMaterial material, Settings settings) {
-            super(material, Type.HELMET, settings.maxCount(1));
+        public Helmet(ArmorMaterial material, Properties properties) {
+            super(material, Type.HELMET, properties.stacksTo(1));
         }
     }
 
@@ -20,10 +20,10 @@ public class ArmorBuilder {
         /**
          * Creates a chestplate with the chosen materials.
          * @param material The armor material.
-         * @param settings Item settings.
+         * @param properties Item properties.
          */
-        public Chestplate(ArmorMaterial material, Settings settings) {
-            super(material, Type.CHESTPLATE, settings.maxCount(1));
+        public Chestplate(ArmorMaterial material, Properties properties) {
+            super(material, Type.CHESTPLATE, properties.stacksTo(1));
         }
     }
 
@@ -31,10 +31,10 @@ public class ArmorBuilder {
         /**
          * Creates a pair of leggings with the chosen materials.
          * @param material The armor material.
-         * @param settings Item settings.
+         * @param properties Item properties.
          */
-        public Leggings(ArmorMaterial material, Settings settings) {
-            super(material, Type.LEGGINGS, settings.maxCount(1));
+        public Leggings(ArmorMaterial material, Properties properties) {
+            super(material, Type.LEGGINGS, properties.stacksTo(1));
         }
     }
 
@@ -42,10 +42,10 @@ public class ArmorBuilder {
         /**
          * Creates a pair of boots with the chosen materials.
          * @param material The armor material.
-         * @param settings Item settings.
+         * @param properties Item properties.
          */
-        public Boots(ArmorMaterial material, Settings settings) {
-            super(material, Type.BOOTS, settings.maxCount(1));
+        public Boots(ArmorMaterial material, Properties properties) {
+            super(material, Type.BOOTS, properties.stacksTo(1));
         }
     }
 }

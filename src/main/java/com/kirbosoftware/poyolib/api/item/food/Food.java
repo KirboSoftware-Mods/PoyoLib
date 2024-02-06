@@ -1,6 +1,6 @@
 package com.kirbosoftware.poyolib.api.item.food;
 
-public class Food extends FoodType{
+public class Food extends FoodType {
     private int hunger = 0;
     private float fullness = 0.0f;
 

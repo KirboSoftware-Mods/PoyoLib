@@ -1,8 +1,8 @@
 package com.kirbosoftware.poyolib.api.core.registry;
 
 import com.kirbosoftware.poyolib.api.util.LangUtil;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -62,7 +62,7 @@ public class Registar<T> {
      * @throws IllegalArgumentException If a duplicate registration with the same path is attempted.
      */
     public RegEntry<T> register(String path, T entry) {
-        RegEntry<T> regEntry = RegEntry.create(new Identifier(this.MOD_ID, path), entry);
+        RegEntry<T> regEntry = RegEntry.create(new ResourceLocation(this.MOD_ID, path), entry);
 
         // Check for duplicate registration and throw an exception if found
         if (entries.putIfAbsent(path, regEntry.get()) != null) {
