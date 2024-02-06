@@ -1,4 +1,4 @@
-package java.com.kirbosoftware.poyolib;
+package com.kirbosoftware.poyolib;
 
 import com.kirbosoftware.poyolib.api.core.registry.RegEntry;
 import com.kirbosoftware.poyolib.api.core.registry.Registar;
