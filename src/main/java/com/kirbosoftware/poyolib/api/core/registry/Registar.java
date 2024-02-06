@@ -1,6 +1,6 @@
 package com.kirbosoftware.poyolib.api.core.registry;
 
-import com.kirbosoftware.poyolib.api.util.LangUtil;
+import com.kirbosoftware.poyolib.api.util.lang.LangUtil;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 

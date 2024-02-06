@@ -1,5 +1,6 @@
-package com.kirbosoftware.poyolib.api.util;
+package com.kirbosoftware.poyolib.api.util.lang;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
@@ -22,5 +23,10 @@ public class LangUtil {
             }
         }
         return String.valueOf(chars);
+    }
+
+    @Contract(pure = true)
+    public static @NotNull String trimString(String string) {
+        return string.replace("_", " ");
     }
 }
