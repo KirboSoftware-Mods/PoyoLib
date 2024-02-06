@@ -15,7 +15,7 @@ public class RegEntry<T> {
     /**
      * Private constructor to create a {@code RegEntry} with the specified identifier and object.
      *
-     * @param resourceLocation The identifier associated with the registered object.
+     * @param resourceLocation The resourceLocation associated with the registered object.
      * @param entry      The registered object.
      */
     private RegEntry(ResourceLocation resourceLocation, T entry) {
@@ -27,7 +27,7 @@ public class RegEntry<T> {
      * Creates a new instance of {@code RegEntry} with the specified identifier and object.
      *
      * @param <T>        The type of the registered object.
-     * @param resourceLocation The identifier associated with the registered object.
+     * @param resourceLocation The resourceLocation associated with the registered object.
      * @param entry      The registered object.
      * @return A new instance of {@code RegEntry} containing the specified identifier and object.
      */
@@ -45,9 +45,9 @@ public class RegEntry<T> {
     }
 
     /**
-     * Retrieves the identifier associated with the registered object.
+     * Retrieves the resourceLocation associated with the registered object.
      *
-     * @return The identifier associated with the registered object.
+     * @return The resourceLocation associated with the registered object.
      */
     public ResourceLocation getId() {
         return resourceLocation;
