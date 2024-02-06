@@ -78,18 +78,11 @@ public class Registar<T> {
     }
 
     /**
-     * Initializes the registered objects by registering them with the associated registry using their unique paths.
-     */
-    public void initialize() {
-        this.getEntries().forEach((s, t) -> Registry.register(getRegistry(), new Identifier(this.MOD_ID, s), t));
-    }
-
-    /**
      * Gets the mod ID associated with the registered objects.
      *
      * @return The mod ID.
      */
-    private String getModId() {
+    public String getModId() {
         return MOD_ID;
     }
 
@@ -98,7 +91,7 @@ public class Registar<T> {
      *
      * @return The registry.
      */
-    private Registry<T> getRegistry() {
+    public Registry<T> getRegistry() {
         return registry;
     }
 
