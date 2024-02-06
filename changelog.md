@@ -1,5 +1,11 @@
 # Changelog 
 
+## v0.3.1 for 1.20.1 and 1.20.4
+- reworked the lang util package into a lang module. I will add more language stuff in there.
+- revamped the mappings from yarn to Mojang's mappings. 
+- updated to loom 1.5 and fabric loader 0.15.x
+- small refactors to the registar package
+
 ## v0.3
 - rewritten `Registar` module. See the module's `README.md`
 - rewritten `Config` module. See the module's `README.md`
