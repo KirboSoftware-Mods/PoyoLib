@@ -28,12 +28,12 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-$minecraft_version:$parchment_version@zip")
+//		parchment("org.parchmentmc.data:parchment-$minecraft_version:$parchment_version@zip")
 	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}+$minecraft_version"
 
 	include(implementation("com.electronwill.night-config:toml:3.6.0"))
 
