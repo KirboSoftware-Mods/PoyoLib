@@ -1,6 +1,5 @@
 package com.kirbosoftware.poyolib.api.item.craft;
 
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TieredItem;
@@ -39,11 +38,13 @@ public class CraftedToolDamage extends TieredItem {
      */
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        ItemStack copy = stack.copy();
-        if (copy.hurt(1, RandomSource.create(), null))
-            return ItemStack.EMPTY;
-        else
+        if (stack.getDamageValue() < stack.getMaxDamage() - 1) {
+            ItemStack copy = stack.copy();
+            copy.setDamageValue(stack.getDamageValue() + 1);
             return copy;
+        } else {
+            return ItemStack.EMPTY;
+        }
     }
 
     /**

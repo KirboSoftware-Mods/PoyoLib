@@ -1,9 +1,5 @@
 package com.kirbosoftware.poyolib.api.item.craft;
 
-import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -11,7 +7,7 @@ import net.minecraft.world.item.ItemStack;
  * The {@code CraftedItemDamage} class represents a crafted item with durability that can be depleted over time.
  * It extends the {@code Item} class and implements specific functionality for items with damage.
  */
-public class CraftedItemDamage extends Item implements CustomDamageHandler {
+public class CraftedItemDamage extends Item {
 
     /**
      * Constructs a new {@code CraftedItemDamage} with the specified maximum damage and properties.
@@ -41,11 +37,13 @@ public class CraftedItemDamage extends Item implements CustomDamageHandler {
      */
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        ItemStack copy = stack.copy();
-        if (copy.hurt(1, RandomSource.create(), null))
-            return ItemStack.EMPTY;
-        else
+        if (stack.getDamageValue() < stack.getMaxDamage() - 1) {
+            ItemStack copy = stack.copy();
+            copy.setDamageValue(stack.getDamageValue() + 1);
             return copy;
+        } else {
+            return ItemStack.EMPTY;
+        }
     }
 
     /**
@@ -56,10 +54,5 @@ public class CraftedItemDamage extends Item implements CustomDamageHandler {
     @Override
     public boolean hasCraftingRemainingItem() {
         return true;
-    }
-
-    @Override
-    public int damage(ItemStack stack, int amount, LivingEntity entity, EquipmentSlot slot, Runnable breakCallback) {
-        return 0;
     }
 }
